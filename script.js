@@ -2,8 +2,7 @@
 
 $(document).ready(function () {
   const apiRoot = "https://tasksapplication.onrender.com/v1/tasks";
-  const trelloApiRoot =
-    "https://api.trello.com/1/members/me/boards?key=9bba70aeef6507eac7360b7692b424d4&token=ATTA04ce4ad5c7ccfdd2af9faf46e1e36e21d210d54c77f805eb840ff302f1f0a92a60DA5F96&fields=id,name&lists=all";
+  const trelloApiRoot = "https://tasksapplication.onrender.com/v1/trello";
   const datatableRowTemplate = $("[data-datatable-row-template]").children()[0];
   const $tasksContainer = $("[data-tasks-container]");
 
@@ -15,7 +14,7 @@ $(document).ready(function () {
   getAllTasks();
 
   function getAllAvailableBoards(callback, callbackArgs) {
-    var requestUrl = trelloApiRoot;
+    var requestUrl = trelloApiRoot + "/boards";
 
     $.ajax({
       url: requestUrl,
