@@ -3,7 +3,7 @@
 $(document).ready(function () {
   const apiRoot = "https://tasksapplication.onrender.com/v1/tasks";
   const trelloApiRoot =
-    "https://api.trello.com/1/boards/67ed1302c87256bec86faa18?key=9bba70aeef6507eac7360b7692b424d4&token=ATTA04ce4ad5c7ccfdd2af9faf46e1e36e21d210d54c77f805eb840ff302f1f0a92a60DA5F96";
+    "https://api.trello.com/1/members/me/boards?key=9bba70aeef6507eac7360b7692b424d4&token=ATTA04ce4ad5c7ccfdd2af9faf46e1e36e21d210d54c77f805eb840ff302f1f0a92a60DA5F96&fields=id,name&lists=all";
   const datatableRowTemplate = $("[data-datatable-row-template]").children()[0];
   const $tasksContainer = $("[data-tasks-container]");
 
